@@ -1,0 +1,54 @@
+@import "../../../utils/constants.scss";
+@import "../../../utils/functions.scss";
+
+.mainCont {
+  background-color: $mainBgColor1;
+  min-height: calc(100vh - toRem(68));
+  // border: $basicBorder;
+  padding-top: toRem(16);
+  min-width: toRem(375);
+}
+
+.container {
+  width: 70%;
+  margin-inline: auto;
+  display: flex;
+  gap: toRem(24);
+  // border: $basicBorder;
+
+  @media (max-width: toRem(768)) {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+.itemsCont {
+  background-color: #fff;
+  flex: 2;
+  padding: toRem(12) toRem(0);
+  border-radius: 4px;
+  // border: $basicBorder;
+}
+
+.orderItemsHeading {
+  display: block;
+  margin-left: toRem(16);
+  color: $greyText2;
+  font-weight: 600;
+}
+
+.separator {
+  margin-top: toRem(8);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.listEmptyCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: $basicBorder;
+  height: 80%;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+// border-bottom: 1px solid rgba(200, 200, 200, 0.4);

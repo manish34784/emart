@@ -1,0 +1,36 @@
+@import "./functions.scss";
+
+$themeColor: #1f841b;
+$themeColorFaded: rgba(31, 132, 27, 0.6);
+$secondaryColor: hsl(0, 100%, 85%);
+$basicBorder: 1px solid black;
+$inputBgColor1: hsl(197, 71%, 96%);
+$inputBgColor2: rgb(242, 242, 242, 0.5);
+$mainBgColor1: rgba(200, 200, 200, 0.2);
+$widthVals: (
+  "xs": toRem(600),
+  "sm": toRem(768),
+  "md": toRem(1024),
+  "lg": toRem(1440),
+);
+$gray: rgb(170, 170, 170);
+$greyText: rgba(100, 100, 100, 0.6);
+$greyText2: rgba(50, 50, 50, 0.6);
+
+// @mixin border($width, $style, $color) {
+//   border: $width $style $color;
+// }
+
+@mixin mediaQueriesBelow($sizeStr) {
+  @media (max-width: map-get($widthVals, $sizeStr)) {
+    @content;
+  }
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+:export {
+  themeColor: $themeColor;
+}

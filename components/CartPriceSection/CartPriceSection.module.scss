@@ -1,0 +1,55 @@
+@import "../../utils/constants.scss";
+@import "../../utils/functions.scss";
+
+.orderItemsHeading {
+  display: block;
+  margin-left: toRem(16);
+  color: $greyText2;
+  font-weight: 600;
+}
+
+.separator {
+  margin-top: toRem(8);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.priceCont {
+  background-color: #fff;
+  flex: 1;
+  padding: toRem(12) toRem(0);
+  border-radius: 4px;
+  // border: $basicBorder;
+}
+
+.priceBreakupCont {
+  padding: toRem(16) toRem(16);
+
+  display: flex;
+  flex-direction: column;
+  gap: toRem(16);
+  margin-top: toRem(6);
+  // border: $basicBorder;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  gap: toRem(16);
+}
+
+.discountText {
+  color: $themeColor;
+}
+
+.finalPriceCont {
+  border-top: 1px dotted $gray;
+  border-bottom: 1px dotted $gray;
+  padding: toRem(20) toRem(0);
+  display: flex;
+  justify-content: space-between;
+  gap: toRem(16);
+
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+}

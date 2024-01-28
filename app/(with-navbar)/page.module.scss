@@ -1,0 +1,38 @@
+@import "../../utils/constants.scss";
+@import "../../utils/functions.scss";
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: $mainBgColor1;
+  // border: $basicBorder;
+}
+
+.carouselCont {
+  width: 90%;
+  min-width: toRem(400);
+  max-width: toRem(1000);
+  margin: toRem(16) auto;
+  // @include border(brown);
+}
+
+.carouselBox {
+  position: relative;
+  padding: 0 toRem(32);
+  aspect-ratio: 2.5;
+  // @include border(green);
+}
+
+.indicatorContainer {
+  position: absolute;
+  width: calc(100% - toRem(64));
+  bottom: 5px;
+  z-index: 10;
+}
+
+.productsCont {
+  // background-color: rgba(200, 200, 200, 0.2);
+  background-color: #fff;
+  width: 95%;
+  padding: toRem(32);
+  margin: toRem(32) auto;
+}

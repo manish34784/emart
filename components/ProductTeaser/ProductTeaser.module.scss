@@ -1,0 +1,19 @@
+@import "../../utils/functions.scss";
+
+.productRow {
+  display: flex;
+  padding: toRem(30) 0 toRem(30) toRem(24);
+  // gap: toRem(25);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.prodImage {
+  margin-inline: toRem(25);
+  border-radius: 5px;
+}
+
+.linkCont {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+}

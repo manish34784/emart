@@ -1,0 +1,169 @@
+@import "../../utils/constants.scss";
+@import "../../utils/functions.scss";
+
+@mixin authButtons {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  border: none;
+  background-color: inherit;
+  padding: toRem(8) toRem(16);
+  border-radius: toRem(20);
+
+  @media (max-width: toRem(500)) {
+    padding: toRem(8) toRem(2);
+    // border-radius: toRem(20);
+  }
+}
+
+.mainNavCont {
+  width: 100%;
+  min-width: toRem(448);
+  box-shadow: 3px 0 2px rgba($color: #000000, $alpha: 0.2);
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  // @include border(red);
+}
+
+.navBoxContainer {
+  width: 90%;
+  margin: 0 auto;
+  // @include border(blue);
+}
+.navBox {
+  display: flex;
+  align-items: center;
+  padding: toRem(10) toRem(32);
+  // border: $basicBorder;
+
+  @media (max-width: map-get($widthVals, "xs")) {
+    padding: toRem(6) toRem(20);
+  }
+}
+.logoLink {
+  color: $themeColor;
+  margin-right: 1rem;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: toRem(8);
+}
+.logoIcon {
+  @include mediaQueriesBelow("sm") {
+    display: none !important;
+  }
+}
+.authActionsBox {
+  margin-left: auto;
+  display: flex;
+  gap: toRem(24);
+  // border: $basicBorder;
+}
+
+.signInBox {
+  @include authButtons();
+  text-decoration: none;
+  // border: $basicBorder;
+}
+
+.authIcons {
+  color: #555;
+  width: toRem(21);
+  height: toRem(21);
+  @media (max-width: toRem(768)) {
+    display: none !important;
+  }
+}
+
+.signInText {
+  color: $themeColor;
+}
+
+.highlight {
+  background-color: rgba(173, 216, 230, 0.5) !important;
+  // border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  // text-decoration: double;
+  // font-weight: bold;
+}
+
+.cartCont {
+  // border: $basicBorder;
+  margin-left: toRem(32);
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+}
+
+.cartIconCont {
+  // border: $basicBorder;
+  position: relative;
+}
+
+.countCont {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.cartIcon {
+  color: #555;
+  width: toRem(21);
+  height: toRem(21);
+  @media (max-width: toRem(768)) {
+    width: toRem(24);
+    height: toRem(24);
+  }
+}
+
+.cartText {
+  color: $themeColor;
+  @media (max-width: toRem(768)) {
+    display: none;
+  }
+}
+
+:export {
+  themeColor: $themeColor;
+}
+
+/*
+
+Screen 850
+parent width 765 (90% of screen)
+side paddings in parent: 64
+
+a1: 75
+MargR: 1rem = 16
+
+SB: width -> 50% of parent after removing padding ( 0.5 * (765 - 64) = 350)
+margin-right: 16
+
+
+margin-left: variable
+105     -
+Gap 24  - - > 242
+112     -
+*/
+
+/*
+  screen width = x
+  inner space for 3 elements:- 0.9x - 64
+
+  1st element: 91px
+  3rd element: 242px
+  Margin right on middle element: 16
+  Remaining space for (middle element + variable margin-left) = 0.9x - 64 - 91 - 16 - 242 = 0.9x - 413 = 352
+  SB = 0.45 * (0.9x - 64) = 0.415x - 28.8; = 350
+
+  variable margin-left = 0.9x - 413 - 0.415x + 28.8 = 0.485x - 384.2 > 0
+
+*/

@@ -1,0 +1,9 @@
+@import "../../utils/constants.scss";
+
+.selected-flag:hover {
+  // background-color: red !important;
+}
+
+:export {
+  inputBgColor2: $inputBgColor2;
+}

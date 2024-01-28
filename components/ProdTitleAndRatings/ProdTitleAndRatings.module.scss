@@ -1,0 +1,37 @@
+@import "../../utils/constants.scss";
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+}
+.title:hover {
+  color: $themeColor;
+}
+
+.ratingsRow {
+  margin-top: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: toRem(12);
+}
+
+.avgRatingCont {
+  background-color: $themeColor;
+  padding: 4px 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.avgRatingText {
+  font-size: 12px;
+  color: #fff;
+}
+
+.ratingsStatsText {
+  color: $greyText;
+  font-weight: 600;
+  font-size: 13px;
+}

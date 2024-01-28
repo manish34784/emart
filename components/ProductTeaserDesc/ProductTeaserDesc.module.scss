@@ -1,0 +1,34 @@
+@import "../../utils/functions.scss";
+@import "../../utils/constants.scss";
+
+.descCont {
+  padding-left: toRem(25);
+  padding-right: toRem(8);
+  // border: $basicBorder;
+  // flex: 1;
+  min-width: toRem(600);
+}
+
+.listCont {
+  margin-top: toRem(12);
+  list-style: none;
+}
+
+.listItem {
+  list-style-position: inside;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.listItem::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: toRem(16);
+  color: $greyText;
+}
+
+.listItem:last-child {
+  margin-bottom: 0px;
+}

@@ -1,0 +1,28 @@
+@import "../../utils/constants.scss";
+@import "../../utils/functions.scss";
+
+.phoneContainer {
+  // display: flex;
+}
+
+.phoneInput {
+  width: 100% !important;
+  background-color: $inputBgColor2 !important;
+  border-radius: toRem(20) !important;
+  padding-left: toRem(62) !important;
+  border: unset !important;
+}
+
+.phoneButton {
+  background-color: unset !important;
+  border: none !important;
+  left: toRem(14) !important;
+
+  & > div:hover {
+    background-color: unset !important;
+  }
+}
+
+:export {
+  inputBgColor2: $inputBgColor2;
+}

@@ -1,0 +1,18 @@
+@import "../../utils/constants.scss";
+@import "../../utils/functions.scss";
+
+.inputBox {
+  background-color: $inputBgColor2;
+  padding: toRem(11) toRem(22);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.errorText {
+  margin: 0.2rem 0 0 1.4rem;
+  margin: toRem(3.2) 0 0 toRem(22);
+  font-size: toRem(12);
+  color: red;
+}

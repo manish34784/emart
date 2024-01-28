@@ -1,0 +1,8 @@
+@use "sass:math";
+@function toRem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error "Recieved size with units, please remove units before passing to function";
+  }
+}

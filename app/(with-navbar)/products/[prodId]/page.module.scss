@@ -1,0 +1,99 @@
+@import "../../../../utils/constants.scss";
+@import "../../../../utils/functions.scss";
+
+.mainCont {
+  background-color: $mainBgColor1;
+  min-height: calc(100vh - toRem(68));
+}
+
+.contentCont {
+  width: 80%;
+  margin-inline: auto;
+  padding: toRem(16) 0;
+  background-color: #fff;
+  display: flex;
+  gap: toRem(32);
+
+  min-width: toRem(768);
+  height: 100%;
+  // border: $basicBorder;
+  position: relative;
+}
+
+.imgAndBtnCont {
+  width: 40%;
+  // border: $basicBorder;
+  align-self: flex-start;
+  position: sticky;
+  top: toRem(82);
+
+  display: flex;
+  flex-direction: column;
+  gap: toRem(32);
+}
+
+.imageCont {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  align-self: flex-start;
+}
+
+.priceBoxOvverideClass {
+  padding-inline: 0;
+  margin-top: toRem(16);
+}
+
+.textDescCont {
+  flex: 1;
+  padding: toRem(8) toRem(16);
+}
+
+.specsCont {
+  margin-top: toRem(24);
+  border: 0.5px solid rgba(128, 128, 128, 0.3);
+}
+
+.specsSection {
+  padding: toRem(24) toRem(16);
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.3);
+}
+
+.headText {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.subHeaderText {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: toRem(20);
+  display: inline-block;
+}
+
+.listCont {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
+}
+
+.listItem {
+  display: flex;
+  gap: toRem(16);
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.coreKeyText {
+  flex: 3;
+  color: rgba(128, 128, 128, 0.9);
+}
+
+.coreKeyValue {
+  flex: 5;
+  color: rgba(0, 0, 0, 0.8);
+}

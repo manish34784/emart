@@ -1,0 +1,17 @@
+.main {
+  padding: 1rem 2rem;
+  background-color: aquamarine;
+}
+
+.hero {
+  padding: 2rem;
+  background-color: lightblue;
+
+  & .name-input {
+    margin-left: 1rem;
+  }
+
+  // & input {
+  //   margin-left: 1rem;
+  // }
+}

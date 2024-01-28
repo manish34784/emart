@@ -1,0 +1,38 @@
+@use "../../utils/functions.scss";
+@import "../../utils/constants.scss";
+
+.searchBox {
+  // min-width: toRem(160);
+  width: 40%;
+  // border: $basicBorder;
+  background-color: $inputBgColor1;
+  border-radius: 5px;
+  padding: toRem(13) 0 toRem(13) toRem(13);
+  display: flex;
+  align-items: center;
+  margin-right: toRem(16);
+  gap: toRem(12);
+
+  @include mediaQueriesBelow("md") {
+    width: clamp(toRem(160), 25%, toRem(300));
+  }
+
+  @include mediaQueriesBelow("sm") {
+    width: clamp(toRem(80), 26%, toRem(250));
+  }
+}
+
+.searchIcon {
+  @media (max-width: toRem(768)) {
+    display: none !important;
+  }
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  height: toRem(20);
+  width: 100%;
+  // padding-left: toRem(12);
+  background-color: inherit;
+}

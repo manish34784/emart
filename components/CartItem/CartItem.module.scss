@@ -1,0 +1,83 @@
+@import "../../utils/constants.scss";
+
+.itemCont {
+  padding: toRem(24);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+
+  display: flex;
+  gap: toRem(24);
+}
+.imageAndUnitsCont {
+  // border: $basicBorder;
+  display: flex;
+  flex-direction: column;
+  gap: toRem(16);
+  align-items: center;
+}
+
+.itemImage {
+  border-radius: 4px;
+}
+
+.itemDetailsCont {
+  flex: 1;
+  // border: $basicBorder;
+
+  display: flex;
+  flex-direction: column;
+  gap: toRem(16);
+}
+
+.itemDetails {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // @include border(red);
+}
+
+.itemTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+.subTitle {
+  margin-top: toRem(4);
+  color: $greyText;
+  font-size: 12px;
+}
+
+.deliveryText {
+  // color: $themeColor;
+  margin-top: toRem(10);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.priceBoxCont {
+  // border: $basicBorder;
+  margin-top: toRem(8);
+  // justify-content: flex-end;
+  padding: 0;
+}
+
+.priceText {
+  font-size: 14px;
+}
+.discountText {
+  margin-top: toRem(3);
+}
+
+.actionsCont {
+  // border: $basicBorder;
+  padding-bottom: toRem(3);
+}
+
+.removeBtn {
+  background-color: inherit;
+  color: rgba(0, 0, 0, 0.9);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}

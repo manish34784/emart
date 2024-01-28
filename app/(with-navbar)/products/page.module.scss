@@ -1,0 +1,15 @@
+@import "../../../utils/constants.scss";
+@import "../../../utils/functions.scss";
+
+.mainContainer {
+  background-color: $mainBgColor1;
+  flex: 1;
+  padding: toRem(8) toRem(16);
+  display: flex;
+  gap: toRem(8);
+}
+
+.productsCont {
+  background-color: #fff;
+  flex: 1;
+}
