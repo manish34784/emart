@@ -8,7 +8,7 @@ const store = createStore(rootReducer);
 
 store.subscribe(() => {
   const latestState = store.getState();
-  // console.log("latestState: ", latestState);
+  console.log("latestState: ", latestState);
   localStorage.setItem("redux-store", JSON.stringify(latestState));
 });
 

@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import classes from "./page.module.scss";
 import { ProductInfo } from "@/types/appTypes";
 import { useSelector } from "react-redux";
-import { RootStateType } from "@/redux/reduxTypes";
+import { RootStateType, StoreItemType } from "@/redux/reduxTypes";
 import CartItem from "@/components/CartItem/CartItem";
 import { getProductById } from "@/utils/dataAndGetters";
 import CartPriceSection from "@/components/CartPriceSection/CartPriceSection";
@@ -13,7 +13,9 @@ import Loader from "@/components/Loader/Loader";
 type FullProductInfo = ProductInfo & { units: number };
 
 const Cart = () => {
-  const { items: storeItems } = useSelector((st: RootStateType) => st);
+  const storeItems: StoreItemType[] = useSelector(
+    (st: RootStateType) => st.items
+  );
 
   const [loading, setLoading] = useState<boolean>(true);
   const [detailedItems, setDetailedItems] = useState<ProductInfo[]>(null);

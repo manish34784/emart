@@ -6,12 +6,15 @@ interface ItemsReducerFunc {
 }
 
 function getStorageState(): RootStateType {
-  const storedData = localStorage.getItem("redux-store");
-  console.log("storedData: ", storedData);
+  if (typeof window !== "undefined") {
+    const storedData = localStorage.getItem("redux-store");
+    console.log("storedData: ", storedData);
 
-  if (!storedData) return null;
-  const storedState = JSON.parse(storedData) as RootStateType;
-  return storedState;
+    if (!storedData) return null;
+    const storedState = JSON.parse(storedData) as RootStateType;
+    return storedState;
+  }
+  return { items: [] };
 }
 
 const existingState = getStorageState();

@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import { muiTheme } from "@/utils/muiTheme";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Online Super Mart",

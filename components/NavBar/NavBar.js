@@ -18,7 +18,7 @@ function NavBar() {
   const router = useRouter();
   const { authToken, setAuthToken } = useContext(AuthContext);
 
-  const { items } = useSelector((st) => st);
+  const items = useSelector((st) => st.items);
 
   const TITLES = {
     login: "Sign In",
